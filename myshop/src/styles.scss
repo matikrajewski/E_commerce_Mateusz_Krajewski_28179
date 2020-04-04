@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+body
+{
+	background-image: url("https://files.123freevectors.com/wp-content/original/131810-turquoise-and-white-low-poly-background-template-vector-graphic.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/* ---- KOLUMNY ---- */
+*
+{
+	box-sizing: border-box;
+}
+.column {
+	float: left;
+	padding: 10px;
+	height: 100%;
+
+}
+
+.left, .right {
+	width: 15%;
+}
+
+.middle {
+	width: 70%;
+//	background-color:rgba(255, 255, 255, 0.5);
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* ---- LOGO ---- */
+
+.logo
+{
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 15%;
+padding:30px;
+text-align: center;
+}
+
+/* ---- TABELA ---- */
+
+.tab_products
+{
+  margin-left: auto;
+  margin-right: auto;
+}

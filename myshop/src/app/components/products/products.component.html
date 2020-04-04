@@ -1,3 +1,38 @@
-<p>products works!</p>
+<app-panel-top></app-panel-top>
 
-<button routerLink="/landing">Powrot</button>
+<div class="column left">
+
+</div>
+<div class="column middle">
+  <button routerLink="/landing">Powrót</button>
+  <div class="products">
+    <table class="tab_products">
+        <thead *ngIf="this.mainService.products">
+            <tr>
+                <th>obrazek</th>
+                <th>dane</th>
+                <th>akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let product of this.mainService.products?.productsTable">
+            <tr style="background-color: whitesmoke;">
+              <td><img src="{{product.thumbnail}}" alt="" height="300"></td>
+              <td>
+                <ul>
+                  <li>Tytuł: {{product.title}}</li>
+                  <li>Cena: {{product.price}}</li>
+                  <li>Kategoria: {{product.category}}</li>
+                </ul>
+              </td>
+              <td>
+                <button>Do koszyka</button>
+              </td>
+            </tr>
+          </ng-container>
+        </tbody>
+    </table>
+  </div>
+</div>
+<div class="column right">
+</div>
