@@ -16,6 +16,8 @@ export class MainService {
   products; // Tutaj wyląduje obiekt z produktami - odpowiedź API i bazy danych na naszą prośbę
   apiPath = 'http://jakubadamus.cba.pl/xhr.php?'; // Ścieżka do naszego api
 
+  cart = [];
+
   getProducts(productsRequest) { //  Pobiera produkty poprzez API
     const s = new Promise((resolve, reject) => {
       const xhttp = new XMLHttpRequest();
