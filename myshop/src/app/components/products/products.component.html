@@ -1,12 +1,8 @@
 <app-panel-top></app-panel-top>
 
-<div class="column left">
 
-</div>
-<div class="column middle">
-  <button routerLink="/landing">Powrót</button>
-  <div class="products">
-    <table class="tab_products">
+<div class="products">
+    <table style="margin:0 auto;" id="productsTable">
         <thead *ngIf="this.mainService.products">
             <tr>
                 <th>obrazek</th>
@@ -15,24 +11,21 @@
             </tr>
         </thead>
         <tbody>
-          <ng-container *ngFor="let product of this.mainService.products?.productsTable">
-            <tr style="background-color: whitesmoke;">
-              <td><img src="{{product.thumbnail}}" alt="" width="220px"></td>
-              <td>
-                <ul>
-                  <li>Tytuł: {{product.title}}</li>
-                  <li>Cena: {{product.price}}</li>
-                  <li>Kategoria: {{product.category}}</li>
-                </ul>
-              </td>
-              <td>
-                <button (click)="addToCart(product)">Do koszyka</button>
-              </td>
-            </tr>
-          </ng-container>
+            <ng-container *ngFor="let product of this.mainService.products?.productsTable">
+                <tr style="background-color: whitesmoke;">
+                    <td><img src="{{product.thumbnail}}" alt=""></td>
+                    <td>
+                        <ul>
+                            <li>Tytuł: {{product.title}}</li>
+                            <li>Cena: {{product.price}}</li>
+                            <li>Kategoria: {{product.category}}</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <button (click)="addToCart(product)">Do koszyka</button>
+                    </td>
+                </tr>
+            </ng-container>
         </tbody>
     </table>
-  </div>
-</div>
-<div class="column right">
 </div>

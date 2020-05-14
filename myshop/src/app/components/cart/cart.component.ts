@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { MainService } from 'src/app/services/main.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   getCartPrice() {
     let price = 0;
     for (const object of this.mainService.cart) {
@@ -19,4 +21,5 @@ export class CartComponent implements OnInit {
     }
     return price;
   }
+
 }
